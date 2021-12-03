@@ -76,3 +76,13 @@ typings/
 .fusebox/
 
 data/
+data/WiredTiger.wt
+data/WiredTiger.turtle
+data/sizeStorer.wt
+data/journal/WiredTigerLog.0000000005
+data/index-6-8889773052336516481.wt
+data/index-5-8889773052336516481.wt
+data/diagnostic.data/metrics.interim
+data/diagnostic.data/metrics.2021-12-03T12-22-36Z-00000
+data/collection-4-8889773052336516481.wt
+data/journal/WiredTigerLog.0000000005
