@@ -1,0 +1,22 @@
+{
+  "name": "bikesonlinesg",
+  "version": "1.0.0",
+  "description": "ecommerce site selling bicycles in singapore for GA SEI 6 project 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server.js",
+    "seeder": "node backend/utils/seeder.js"
+  },
+  "author": "Jason Tan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

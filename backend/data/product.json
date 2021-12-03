@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Van Rysel RoadR 100 Bike Helmet",
+    "price": "14.99",
+    "description": "Our design team created this helmet for cyclists starting to cycle on roads and who are looking for a simple, easy to adjust and well-ventilated helmet.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "public_id": "vanrysel-roadr100-helmet",
+        "url": "https://contents.mediadecathlon.com/p1567324/k$6ee3bd9ebf84e30d5ac280270d1597cc/sq/roadr-100-cycling-helmet-black.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bike Helmets",
+    "brand": "Van Rysel",
+    "stock": 0,
+    "numOfReviews": 3,
+    "reviews": [
+      {
+        "name": "Jules",
+        "rating": 4,
+        "comment": "saved my head, but a bit heavy"
+      }
+    ]
+  },
+  {
+    "name": "Triban RT 920 Gravel Bike",
+    "price": "1999.99",
+    "description": "Our dedicated Riverside touring team has designed this bike for adventure bikepacking off the beaten track. A real go anywhere and confidence inspiring bike",
+    "ratings": 4.9,
+    "images": [
+      {
+        "public_id": "triban-rt-920",
+        "url": "https://contents.mediadecathlon.com/p2013313/k$c73bcf1215bd0dca0b94d9c255e098d6/sq/riverside-rt-920-adventure-touring-bike.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bikes",
+    "brand": "Triban",
+    "stock": 0,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "name": "Jason",
+        "rating": 4,
+        "comment": "superb value for money"
+      }
+    ]
+  },
+  {
+    "name": "Triban GRVL 520 Gravel Bike",
+    "price": "1199.99",
+    "description": "We have designed and tested this gravel bike for regular rides. It will guarantee comfort and power on windy trails",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "triban-grvl-520",
+        "url": "https://contents.mediadecathlon.com/p1988285/k$872f691de426b2863e356a448df335ed/sq/mens-gravel-bike-grvl-520-sram-apex-1.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bikes",
+    "brand": "Triban",
+    "stock": 0,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "name": "John",
+        "rating": 3.5,
+        "comment": "great bike but didn't fit me"
+      }
+    ]
+  },
+  {
+    "name": "Van Rysel EDR CF Gravel Bike",
+    "price": "1899.99",
+    "description": "Tested and approved during races, this bike will provide great performance on the road and you'll be amazed at how versatile it is on trails.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "vanrysel-edrcf",
+        "url": "https://contents.mediadecathlon.com/p1889684/k$f84d37e6c0508466f350be380a1b0f0c/sq/edr-cf-carbon-gravel-bike-grx.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bikes",
+    "brand": "Van Rysel",
+    "stock": 0,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "name": "Bob",
+        "rating": 5,
+        "comment": "light weight yet stiff"
+      }
+    ]
+  },
+  {
+    "name": "Triban RC 120 Womens Gravel Bike",
+    "price": "599.99",
+    "description": "Women wanting to discover gravel biking. Easy and versatile: single chainwheel 38-11/42, flared handlebar, 23c tubeless wheels and 700x38c tubeless ready tyres.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "public_id": "triban-rc-120-wmn",
+        "url": "https://contents.mediadecathlon.com/p1952514/k$6356c305af164db634255f0dfdff9590/sq/rc120-womens-disc-gravel-adventure-bike-grey-microshift.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bikes",
+    "brand": "Triban",
+    "stock": 0,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "name": "Sheila",
+        "rating": 3.5,
+        "comment": "some women want pink"
+      }
+    ]
+  },
+
+  {
+    "name": "Van Rysel ",
+    "price": "39.99",
+    "description": "Our engineers have created a comfortable, lightweight, aerodynamic helmet that ventilates the cyclist's head to improve the body's thermoregulation.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "public_id": "vanrysel-rcr-helmet",
+        "url": "https://contents.mediadecathlon.com/p1754000/k$9d8f3ac5b7c12f65e004bb9dcf1c2002/sq/racer-cycling-helmet-blackneon-yellow.jpg?format=auto&f=300x300"
+      }
+    ],
+    "category": "Bike Helmets",
+    "brand": "Van Rysel",
+    "stock": 0,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "name": "Bill",
+        "rating": 4.5,
+        "comment": "saved my noggin!"
+      }
+    ]
+  }
+]
