@@ -56,3 +56,23 @@ exports.loginUser = async (req, res, next) => {
     });
   }
 };
+
+//logout user => /api/v1/logout
+exports.logout = async (req, res, next) => {
+  try {
+    //clearing out hte cookie
+    res.cookie("token", null, {
+      expires: new Date(Date.now()),
+      httpOnly: true,
+    });
+
+    res.status(200).json({
+      success: true,
+      message: "logged out",
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};

@@ -31,11 +31,11 @@ class APIFeatures {
     removeFields.forEach((el) => delete queryCopy[el]);
 
     //advacned filters for price, ratings, etc
-    console.log(queryCopy);
+
     let queryStr = JSON.stringify(queryCopy);
+    //to put the $ sign since Mongo gte and lte needs it
     queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (match) => `$${match}`);
 
-    console.log(queryCopy);
     this.query = this.query.find(JSON.parse(queryStr));
     return this;
   }
