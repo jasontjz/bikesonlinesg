@@ -163,6 +163,55 @@ exports.getUserProfile = async (req, res, next) => {
   }
 };
 
+//update change password => /api/v1/password/update
+
+exports.updatePassword = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user.id).select("+password");
+    //check previous user password
+
+    const isMatched = await user.comparePassword(req.body.oldPassword);
+    if (!isMatched) {
+      return next(new ErrorHandler("old password is incorrect", 400));
+    }
+
+    user.password = req.body.password;
+    await user.save();
+
+    sendToken(user, 200, res);
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
+//update user profile => /api/v1/me/update
+exports.updateProfile = async (req, res, next) => {
+  try {
+    const newUserData = {
+      name: req.body.name,
+      email: req.body.email,
+    };
+
+    //update avatar: To do
+
+    const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
+      new: true,
+      runValidators: true,
+      useFindAndModify: false,
+    });
+
+    res.status(200).json({
+      success: true,
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
 //logout user => /api/v1/logout
 exports.logout = async (req, res, next) => {
   try {
@@ -175,6 +224,89 @@ exports.logout = async (req, res, next) => {
     res.status(200).json({
       success: true,
       message: "logged out",
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
+//Admin routes
+
+//get all users => /api/v1/admin/users
+exports.allUsers = async (req, res, next) => {
+  try {
+    const users = await User.find();
+    res.status(200).json({
+      success: true,
+      users,
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
+//Get user details => /api/v1/admin/user/:id
+exports.getUserDetails = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return next(new ErrorHandler(`No such user id: ${req.params.id}`));
+    }
+
+    res.status(200).json({
+      success: true,
+      user,
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
+//Admin - update user profile for admin => /api/v1/admin/user/:id
+exports.updateUser = async (req, res, next) => {
+  try {
+    const newUserData = {
+      name: req.body.name,
+      email: req.body.email,
+      role: req.body.role,
+    };
+
+    //update avatar: To do
+
+    const user = await User.findByIdAndUpdate(req.params.id, newUserData, {
+      new: true,
+      runValidators: true,
+      useFindAndModify: false,
+    });
+
+    res.status(200).json({
+      success: true,
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+};
+
+//Admin - delete user details => /api/v1/admin/user/:id
+exports.deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return next(new ErrorHandler(`No such user id: ${req.params.id}`));
+    }
+    //remove avatar from cloudinary - to do later
+    await user.remove();
+
+    res.status(200).json({
+      success: true,
     });
   } catch (error) {
     res.status(400).json({

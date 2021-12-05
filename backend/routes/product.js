@@ -7,6 +7,9 @@ const {
   getSingleProduct,
   updateProduct,
   deleteProduct,
+  createProductReview,
+  getProductReviews,
+  deleteReviews,
 } = require("../controllers/productController");
 
 //authenticator middleware
@@ -26,5 +29,14 @@ router
   .route("/admin/product/:id")
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateProduct)
   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteProduct);
+
+//PUT a new product review
+router.route("/review").put(isAuthenticatedUser, createProductReview);
+
+//GET all the product reviews
+router.route("/reviews").get(getProductReviews);
+
+//DELETE the product reviews by id
+router.route("/reviews").delete(isAuthenticatedUser, deleteReviews);
 
 module.exports = router;
