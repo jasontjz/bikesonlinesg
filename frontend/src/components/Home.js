@@ -13,6 +13,9 @@ const Home = () => {
   );
   useEffect(() => {
     dispatch(getProducts());
+
+    if (error) {
+    }
   }, [dispatch]);
 
   return (
