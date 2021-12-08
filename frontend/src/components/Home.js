@@ -7,7 +7,7 @@ import { getProducts } from "../actions/productActions";
 import Loader from "./layout/Loader";
 import { useParams } from "react-router-dom";
 
-const Home = ({}) => {
+const Home = () => {
   const params = useParams();
   const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useDispatch();
