@@ -19,7 +19,7 @@ const ProductDetails = () => {
   return (
     <div className="row f-flex justify-content-around">
       <div className="col-12 col-lg-5 img-fluid" id="product_image">
-        <img src={product.images[0].url} alt="sdf" height="500" width="500" />
+        <img src={product.name} alt="sdf" height="500" width="500" />
       </div>
 
       <div className="col-12 col-lg-5 mt-5">

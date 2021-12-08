@@ -25,7 +25,7 @@ exports.newProduct = async (req, res, next) => {
 //get all products => /api/v1/products?keyword=bikes
 exports.getProducts = async (req, res, next) => {
   try {
-    const resPerPage = 8;
+    const resPerPage = 4;
     const productsCount = await Product.countDocuments();
 
     const apiFeatures = new APIFeatures(Product.find(), req.query)
@@ -35,14 +35,13 @@ exports.getProducts = async (req, res, next) => {
 
     const products = await apiFeatures.query;
 
-    setTimeout(() => {
-      res.status(200).json({
-        success: true,
-        count: products.length,
-        productsCount,
-        products,
-      });
-    }, 2000);
+    res.status(200).json({
+      success: true,
+      count: products.length,
+      productsCount,
+      resPerPage,
+      products,
+    });
   } catch (error) {
     res.status(400).json({
       error: error.message,
