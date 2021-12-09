@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const params = useParams();
 
   const product = useSelector((state) => state.productDetails.product);
-  console.log(product);
+  console.log(product.images && product.images[0].url);
   useEffect(() => {
     dispatch(getProductDetails(params.id));
   }, [dispatch, params.id]);
@@ -19,7 +19,12 @@ const ProductDetails = () => {
   return (
     <div className="row f-flex justify-content-around">
       <div className="col-12 col-lg-5 img-fluid" id="product_image">
-        <img src={product.name} alt="sdf" height="500" width="500" />
+        <img
+          src={product.images && product.images[0].url}
+          alt="sdf"
+          height="500"
+          width="500"
+        />
       </div>
 
       <div className="col-12 col-lg-5 mt-5">
