@@ -13,32 +13,26 @@ const ProductDetails = () => {
   const params = useParams();
   const product = useSelector((state) => state.productDetails.product);
 
-  console.log(quantity);
-
   useEffect(() => {
     dispatch(getProductDetails(params.id));
   }, [dispatch, params.id]);
 
   const addToCart = () => {
-    dispatch(addItemToCart(params.id), quantity);
-    console.log(quantity);
+    dispatch(addItemToCart(params.id, quantity));
     // alert.success("Item Added to Cart");
   };
 
   const increaseQty = () => {
-    //.count is the class name of the plus button div
-    const count = document.querySelector(".count").valueAsNumber;
-    //as the field type is Number we can use 'valueAsNumber' to access it
-    if (count >= product.stock) return;
-    const qty = count + 1;
-
+    const count = document.querySelector(".count");
+    if (count.valueAsNumber >= product.stock) return;
+    const qty = count.valueAsNumber + 1;
     setQuantity(qty);
   };
 
   const decreaseQty = () => {
-    const count = document.querySelector(".count").valueAsNumber;
-    if (count <= 1) return;
-    const qty = count - 1;
+    const count = document.querySelector(".count");
+    if (count.valueAsNumber <= 1) return;
+    const qty = count.valueAsNumber - 1;
     setQuantity(qty);
   };
 

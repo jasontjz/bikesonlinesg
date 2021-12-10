@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./components/Home";
 import ProductDetails from "./components/product/ProductDetails";
+import Cart from "./components/cart/Cart";
 
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
@@ -34,6 +35,8 @@ function App() {
             <Route path="/" element={<Home />} exact />
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} exact />
+
+            <Route path="/cart" element={<Cart />} exact />
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
