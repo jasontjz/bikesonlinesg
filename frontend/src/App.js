@@ -11,6 +11,8 @@ import Register from "./components/user/Register";
 import Profile from "./components/user/Profile";
 import UpdateProfile from "./components/user/UpdateProfile";
 import UpdatePassword from "./components/user/UpdatePassword";
+import ForgotPassword from "./components/user/ForgotPassword";
+import NewPassword from "./components/user/NewPassword";
 
 import ProtectedRoute from "./components/route/ProtectedRoute";
 
@@ -35,9 +37,14 @@ function App() {
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/password/forgot" element={<ForgotPassword />} exact />
+            <Route path="/password/reset" element={<NewPassword />} exact />
+
+            {/* Routes to Protect */}
             <Route path="/me" element={<Profile />} exact />
             <Route path="/me/update" element={<UpdateProfile />} exact />
             <Route path="/password/update" element={<UpdatePassword />} exact />
+            <Route path="/password/forgot" element={<ForgotPassword />} exact />
           </Routes>
         </div>
 

@@ -84,11 +84,9 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
     //create reset password url
-    const resetUrl = `${req.protocol}://${req.get(
-      "host"
-    )}/api/v1/password/reset/${resetToken}`;
+    const resetUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
 
-    const message = `Your password reset request was successful - please go here to reset:\n\n${resetUrl}\n\nIf you have not requested this, please ignore.`;
+    const message = `Hey, your password reset request was successful - please go here to reset:\n\n${resetUrl}\n\nIf you have not requested this, please ignore.`;
 
     try {
       await sendEmail({
@@ -125,9 +123,11 @@ exports.resetPassword = async (req, res, next) => {
 
     const user = await User.findOne({
       resetPasswordToken,
+
       //check that the expiry date of the token is not expired yet
       //   resetPasswordExpire: { $gt: Date.now() },
     });
+    console.log(resetPasswordToken);
 
     //check whether the password matches
     if (req.body.password != req.body.confirmPassword) {
