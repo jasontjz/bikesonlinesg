@@ -540,7 +540,7 @@ footer {
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #232f3e;
+  background: #236b42;
 }
 a[data-toggle="collapse"] {
   position: relative;

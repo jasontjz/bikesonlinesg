@@ -18,6 +18,7 @@ const Home = () => {
   const params = useParams();
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 99999]);
+  const [rating, setRating] = useState(0);
   const [category, setCategory] = useState("");
   const categories = [
     "Bikes",
@@ -32,9 +33,14 @@ const Home = () => {
 
   const dispatch = useDispatch();
 
-  const { loading, products, error, productsCount, resPerPage } = useSelector(
-    (state) => state.products
-  );
+  const {
+    loading,
+    products,
+    error,
+    productsCount,
+    resPerPage,
+    filteredProductsCount,
+  } = useSelector((state) => state.products);
 
   const keyword = params.keyword;
 
@@ -43,11 +49,16 @@ const Home = () => {
       return alert.error(error);
     }
 
-    dispatch(getProducts(keyword, currentPage, price, category));
-  }, [dispatch, error, keyword, currentPage, price, category]);
+    dispatch(getProducts(keyword, currentPage, price, category, rating));
+  }, [dispatch, error, keyword, currentPage, price, category, rating]);
 
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
+  }
+
+  let count = productsCount;
+  if (keyword) {
+    count = filteredProductsCount;
   }
 
   return (
@@ -68,11 +79,11 @@ const Home = () => {
                       <Range
                         marks={{
                           1: `$1`,
-                          9999: `$9999`,
+                          2999: `$2999`,
                         }}
                         min={1}
-                        max={9999}
-                        defaultValue={[1, 9999]}
+                        max={2999}
+                        defaultValue={[1, 2999]}
                         tipFormatter={(value) => `$${value}`}
                         tipProps={{
                           placement: "top",
@@ -81,7 +92,7 @@ const Home = () => {
                         value={price}
                         onChange={(price) => setPrice(price)}
                       />
-
+                      {/* CATEGORY FILTER */}
                       <hr className="my-5" />
                       <div className="mt-5">
                         <h4 className="mb-3">Categories</h4>
@@ -96,6 +107,32 @@ const Home = () => {
                               onClick={() => setCategory(category)}
                             >
                               {category}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      {/* RATING FILTER */}
+                      <hr className="my-3" />
+                      <div className="mt-5">
+                        <h4 className="mb-3">Ratings</h4>
+                        <ul className="pl-0">
+                          {[5, 4, 3, 2, 1].map((star) => (
+                            <li
+                              style={{
+                                cursor: "pointer",
+                                listStyleType: "none",
+                              }}
+                              key={star}
+                              onClick={() => setRating(star)}
+                            >
+                              <div className="rating-outer">
+                                <div
+                                  className="rating-inner"
+                                  style={{
+                                    width: `${star * 20}%`,
+                                  }}
+                                ></div>
+                              </div>
                             </li>
                           ))}
                         </ul>
@@ -128,7 +165,7 @@ const Home = () => {
           </section>
 
           {/* Pagination */}
-          {resPerPage <= productsCount && (
+          {resPerPage <= count && (
             <div className="d-flex jsutify-content-center mt-5">
               <Pagination
                 activePage={currentPage}

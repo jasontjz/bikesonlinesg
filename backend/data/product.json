@@ -1,6 +1,6 @@
 [
   {
-    "name": "Van Rysel RoadR 100 Bike Helmet",
+    "name": "Van Rysel RoadR 100 Cycling Helmet",
     "price": "14.99",
     "description": "Our design team created this helmet for cyclists starting to cycle on roads and who are looking for a simple, easy to adjust and well-ventilated helmet.",
     "ratings": 4.2,
@@ -116,7 +116,7 @@
   },
 
   {
-    "name": "Van Rysel RoadR 500 Bike Helmet",
+    "name": "Van Rysel RoadR 500 Cycling Helmet",
     "price": "39.99",
     "description": "Our engineers have created a comfortable, lightweight, aerodynamic helmet that ventilates the cyclist's head to improve the body's thermoregulation.",
     "ratings": 4.4,
@@ -262,7 +262,7 @@
     "name": "Van Rysel Road Cycling Gloves 500 Yellow",
     "price": "10.00",
     "description": "Cyclists cycling regularly in summer when it's warm and looking for light, thin gloves",
-    "ratings": 4.2,
+    "ratings": 1.5,
     "images": [
       {
         "public_id": "van-rysel-road-500-gloves-yellow",
@@ -286,7 +286,7 @@
     "name": "Van Rysel RoadC 900 Road Cycling Gloves Blue",
     "price": "15.00",
     "description": "Our clothing design teams have developed these road bike gloves for all of your summer rides. They are very comfortable thanks to the padding on the palm.",
-    "ratings": 4.2,
+    "ratings": 2.2,
     "images": [
       {
         "public_id": "van-rysel-road-900-gloves-blue",

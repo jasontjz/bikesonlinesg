@@ -22,8 +22,8 @@ const ProductDetails = () => {
         <img
           src={product.images && product.images[0].url}
           alt="sdf"
-          height="500"
-          width="500"
+          height="400"
+          width="400"
         />
       </div>
 

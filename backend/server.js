@@ -1,7 +1,9 @@
 const app = require("./app");
 const connectDatabase = require("./config/database");
+const fileUpload = require("express-fileupload");
 
 const dotenv = require("dotenv");
+const cloudinary = require("cloudinary").v2;
 const { addListener } = require("nodemon");
 
 //Handle uncaught exceptions
@@ -14,8 +16,15 @@ process.on("uncaughtException", (err) => {
 // setting up config file
 dotenv.config({ path: "backend/config/config.env" });
 
-// Connecting to datbase
+// Connecting to database
 connectDatabase();
+
+//Settting up cloudinary config
+// cloudinary.config()({
+//   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+//   api_key: process.env.CLOUDINARY_API_KEY,
+//   api_secret: process.env.CLOUDINARY_API_SECRET,
+// });
 
 const server = app.listen(process.env.PORT, () => {
   console.log(
