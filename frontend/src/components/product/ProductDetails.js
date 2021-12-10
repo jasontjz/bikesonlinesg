@@ -5,6 +5,7 @@ import MetaData from "../layout/MetaData";
 import { useParams } from "react-router-dom";
 
 import { getProductDetails } from "../../actions/productActions";
+import { addItemToCart } from "../../actions/cartActions";
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
@@ -12,9 +13,17 @@ const ProductDetails = () => {
   const params = useParams();
   const product = useSelector((state) => state.productDetails.product);
 
+  console.log(quantity);
+
   useEffect(() => {
     dispatch(getProductDetails(params.id));
   }, [dispatch, params.id]);
+
+  const addToCart = () => {
+    dispatch(addItemToCart(params.id), quantity);
+    console.log(quantity);
+    // alert.success("Item Added to Cart");
+  };
 
   const increaseQty = () => {
     //.count is the class name of the plus button div
@@ -81,6 +90,8 @@ const ProductDetails = () => {
           type="button"
           id="cart_btn"
           className="btn btn-primary d-inline ml-4"
+          disabled={product.stock === 0}
+          onClick={addToCart}
         >
           Add to Cart
         </button>
@@ -88,7 +99,7 @@ const ProductDetails = () => {
         <hr />
 
         <p>
-          Stock Status: <span id="stock_status">{product.stock}</span>
+          Available Qty: <span id="stock_status">{product.stock}</span>
         </p>
 
         <hr />

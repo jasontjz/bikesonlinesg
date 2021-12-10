@@ -35,7 +35,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 5,
     "numOfReviews": 56,
     "reviews": [
       {
@@ -58,7 +58,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 7,
     "numOfReviews": 56,
     "reviews": [
       {
@@ -81,7 +81,7 @@
     ],
     "category": "Bikes",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 9,
     "numOfReviews": 56,
     "reviews": [
       {
@@ -104,7 +104,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 4,
     "numOfReviews": 56,
     "reviews": [
       {
@@ -128,7 +128,7 @@
     ],
     "category": "Bike Helmets",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 15,
     "numOfReviews": 56,
     "reviews": [
       {
@@ -151,7 +151,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 5,
     "numOfReviews": 5,
     "reviews": [
       {
@@ -175,7 +175,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 8,
     "numOfReviews": 5,
     "reviews": [
       {
@@ -199,7 +199,7 @@
     ],
     "category": "Bikes",
     "brand": "Triban",
-    "stock": 0,
+    "stock": 9,
     "numOfReviews": 5,
     "reviews": [
       {
@@ -223,7 +223,7 @@
     ],
     "category": "Bikes",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 10,
     "numOfReviews": 2,
     "reviews": [
       {
@@ -247,7 +247,7 @@
     ],
     "category": "Cycling Protection",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 45,
     "numOfReviews": 2,
     "reviews": [
       {
@@ -271,7 +271,7 @@
     ],
     "category": "Cycling Protection",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 67,
     "numOfReviews": 2,
     "reviews": [
       {
@@ -295,7 +295,7 @@
     ],
     "category": "Cycling Protection",
     "brand": "Van Rysel",
-    "stock": 0,
+    "stock": 89,
     "numOfReviews": 2,
     "reviews": [
       {
