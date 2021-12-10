@@ -127,7 +127,6 @@ exports.resetPassword = async (req, res, next) => {
       //check that the expiry date of the token is not expired yet
       //   resetPasswordExpire: { $gt: Date.now() },
     });
-    console.log(resetPasswordToken);
 
     //check whether the password matches
     if (req.body.password != req.body.confirmPassword) {

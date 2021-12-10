@@ -2,7 +2,6 @@ import React, { useEffect, useState, Fragment } from "react";
 // import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { UPDATE_PASSWORD_RESET } from "../../constants/userConstants";
 
 import { resetPassword, clearErrors } from "../../actions/userActions";
 
