@@ -25,7 +25,7 @@ exports.newProduct = async (req, res, next) => {
 //get all products => /api/v1/products?keyword=bikes
 exports.getProducts = async (req, res, next) => {
   try {
-    const resPerPage = 4;
+    const resPerPage = 8;
     const productsCount = await Product.countDocuments();
 
     const apiFeatures = new APIFeatures(Product.find(), req.query)

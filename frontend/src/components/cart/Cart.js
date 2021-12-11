@@ -45,10 +45,9 @@ const Cart = () => {
                     <div className="row">
                       <div className="col-4 col-lg-3">
                         <img
+                          className="cart-product-image"
                           src={item.image}
-                          alt="Laptop"
-                          height="90"
-                          width="115"
+                          alt={item.name}
                         />
                       </div>
 
@@ -57,7 +56,7 @@ const Cart = () => {
                       </div>
 
                       <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                        <p id="card_item_price">{item.price}</p>
+                        <p id="card_item_price">${item.price}</p>
                       </div>
 
                       <div className="col-4 col-lg-3 mt-4 mt-lg-0">

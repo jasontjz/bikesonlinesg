@@ -68,7 +68,8 @@ const Home = () => {
       ) : (
         <Fragment>
           <MetaData title={`Buy bikes and accessories online in Singapore`} />
-          <h1 id="products_heading">Bikes</h1>
+
+          <h3 id="products_heading">Welcome to Bikes Online SG</h3>
 
           <section id="products" className="container mt-5">
             <div className="row">

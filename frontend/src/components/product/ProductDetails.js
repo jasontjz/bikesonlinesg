@@ -40,15 +40,16 @@ const ProductDetails = () => {
     <div className="row f-flex justify-content-around">
       <div className="col-12 col-lg-5 img-fluid" id="product_image">
         <img
+          className="product-detail-img"
           src={product.images && product.images[0].url}
-          alt="sdf"
+          alt={product.name}
           height="400"
           width="400"
         />
       </div>
 
       <div className="col-12 col-lg-5 mt-5">
-        <h3>{product.name}</h3>
+        <h3 className="product-detail-name">{product.name}</h3>
         <p id="product_id">Product ID {product._id}</p>
 
         <hr />
@@ -65,7 +66,7 @@ const ProductDetails = () => {
 
         <p id="product_price">${product.price}</p>
         <div className="stockCounter d-inline">
-          <span className="btn btn-danger minus" onClick={decreaseQty}>
+          <span className="btn minus" onClick={decreaseQty}>
             -
           </span>
 
@@ -76,7 +77,7 @@ const ProductDetails = () => {
             readOnly
           />
 
-          <span className="btn btn-primary plus" onClick={increaseQty}>
+          <span className="btn plus" onClick={increaseQty}>
             +
           </span>
         </div>
@@ -87,7 +88,7 @@ const ProductDetails = () => {
           disabled={product.stock === 0}
           onClick={addToCart}
         >
-          Add to Cart
+          ADD TO CART
         </button>
 
         <hr />

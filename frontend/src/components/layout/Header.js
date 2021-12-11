@@ -19,12 +19,12 @@ const Header = () => {
   };
 
   return (
-    <Fragment>
-      <nav className=" navbar row">
+    <div id="sticky-navbar">
+      <nav className="navbar row">
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
             <Link to="/">
-              <img id="logo-header" src="/images/logo_yellow_bg_green.png" />
+              <img id="logo-header" src="/images/logo_bosg_header.png" />
             </Link>
           </div>
         </div>
@@ -40,6 +40,7 @@ const Header = () => {
         <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
           <Link to="/cart" style={{ textDecoration: "none" }}>
             <span id="cart" className="ml-3">
+              <i className="fa fa-shopping-cart mr-2" aria-hidden="true" />
               Cart
             </span>
             <span className="ml-1" id="cart_count">
@@ -95,14 +96,15 @@ const Header = () => {
             </div>
           ) : (
             // !loading && (
-            <Link to="/login" className="btn ml-4" id="login_btn">
+            <Link to="/login" className="btn" id="login_btn">
+              <i className="fa fa-user mr-2" aria-hidden="true" />
               Login
             </Link>
             // )
           )}
         </div>
       </nav>
-    </Fragment>
+    </div>
   );
 };
 
