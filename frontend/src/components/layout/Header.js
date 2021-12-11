@@ -43,7 +43,7 @@ const Header = () => {
               Cart
             </span>
             <span className="ml-1" id="cart_count">
-              {cartItems.length}
+              {cartItems.reduce((acc, item) => acc + Number(item.quantity), 0)}
             </span>
           </Link>
 
