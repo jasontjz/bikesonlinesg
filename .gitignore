@@ -75,7 +75,7 @@ typings/
 # FuseBox cache
 .fusebox/
 
-config.env
+backend/config/config.env
 data/
 data/WiredTiger.wt
 data/WiredTiger.turtle
