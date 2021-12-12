@@ -9,6 +9,10 @@ const path = require("path");
 
 const errorMiddleware = require("./middlewares/errors");
 
+//setting up config file
+// if (process.env.NODE_ENV !== "PRODUCTION")
+require("dotenv").config({ path: "backend/config/config.env" });
+
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(cookieParser());
