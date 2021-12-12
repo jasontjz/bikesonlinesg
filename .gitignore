@@ -77,7 +77,9 @@ typings/
 # FuseBox cache
 .fusebox/
 
-/frontend/node_modules/
+
+/frontend/node_modules
+
 backend/config/config.env
 /frontend/.env.local
 data/
