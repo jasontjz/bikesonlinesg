@@ -35,6 +35,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+/node_modules
+/frontend/node_modules
 
 # TypeScript v1 declaration files
 typings/
@@ -76,6 +78,7 @@ typings/
 .fusebox/
 
 backend/config/config.env
+/frontend/.env.local
 data/
 data/WiredTiger.wt
 data/WiredTiger.turtle
