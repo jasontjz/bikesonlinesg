@@ -71,7 +71,11 @@ const UpdatePassword = () => {
             />
           </div>
 
-          <button type="submit" className="btn update-btn btn-block mt-4 mb-3">
+          <button
+            type="submit"
+            id="btn_update_password"
+            className="btn btn-primary btn-block mt-4 mb-3"
+          >
             Update Password
           </button>
         </form>

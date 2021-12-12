@@ -23,6 +23,7 @@ const Login = () => {
     }
 
     if (error) {
+      window.alert("wrong password");
       dispatch(clearErrors());
     }
   }, [dispatch, isAuthenticated, error]);
@@ -64,9 +65,9 @@ const Login = () => {
           </Link>
 
           <button
-            id="login_button"
+            id="btn_login_main"
             type="submit"
-            className="btn btn-block py-3"
+            className="btn btn-primary btn-block py-2"
           >
             LOGIN
           </button>

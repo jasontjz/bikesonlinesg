@@ -52,7 +52,7 @@ const Header = () => {
             <div className="ml-4 dropdown d-inline">
               <Link
                 to="/"
-                className="btn dropdown-toggle text-white mr-4"
+                className="btn dropdown-toggle text-black mr-4"
                 type="button"
                 id="dropDownMenuButton"
                 data-toggle="dropdown"
@@ -77,19 +77,15 @@ const Header = () => {
                     Orders
                   </Link>
                 ) : (
-                  <Link className="dropdown-item" to="/dashboard">
+                  <div className="dropdown-item" to="/dashboard">
                     Dashboard
-                  </Link>
+                  </div>
                 )}
                 <Link className="dropdown-item" to="/me">
                   Profile
                 </Link>
 
-                <Link
-                  className="dropdown-item text-danger"
-                  to="/"
-                  onClick={logoutHandler}
-                >
+                <Link className="dropdown-item " to="/" onClick={logoutHandler}>
                   Logout
                 </Link>
               </div>

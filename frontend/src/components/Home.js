@@ -17,7 +17,7 @@ const Range = createSliderWithTooltip(Slider.Range);
 const Home = () => {
   const params = useParams();
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([1, 99999]);
+  const [price, setPrice] = useState([1, 1999]);
   const [rating, setRating] = useState(0);
   const [category, setCategory] = useState("");
   const categories = [
@@ -75,16 +75,17 @@ const Home = () => {
             <div className="row">
               {keyword ? (
                 <Fragment>
+                  {/* PRice filter */}
                   <div className="col-6 col-md-3 mt-5 mb-5">
                     <div className="px-5">
                       <Range
                         marks={{
                           1: `$1`,
-                          2999: `$2999`,
+                          1999: `$1999`,
                         }}
                         min={1}
-                        max={2999}
-                        defaultValue={[1, 2999]}
+                        max={1999}
+                        defaultValue={[1, 1999]}
                         tipFormatter={(value) => `$${value}`}
                         tipProps={{
                           placement: "top",

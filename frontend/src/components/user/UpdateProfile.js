@@ -127,7 +127,11 @@ const UpdateProfile = () => {
                             </div>
                         </div> */}
 
-          <button type="submit" className="btn update-btn btn-block mt-4 mb-3">
+          <button
+            type="submit"
+            id="btn_update_profile"
+            className="btn btn-primary btn-block mt-4 mb-3"
+          >
             Update
           </button>
         </form>

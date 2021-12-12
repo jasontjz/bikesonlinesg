@@ -90,6 +90,12 @@ nav {
   font-size: 0.9rem;
 }
 
+.dropdown-item:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
 /* Home page */
 #products_heading {
   margin-top: 1.8rem;
@@ -355,6 +361,11 @@ footer {
 
 /* Login & Register */
 
+#btn_login_main {
+  background-color: red;
+  border-color: red;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -378,6 +389,12 @@ footer {
 .wrapper form a {
   font-size: 0.9rem;
   color: grey;
+}
+
+#forgot_password_button,
+#new_password_button {
+  background-color: red;
+  border-color: red;
 }
 
 /* Avatar */
@@ -506,9 +523,22 @@ footer {
   font-size: 1.1rem;
 }
 
-#edit_profile {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+#btn_update_profile,
+#btn_update_password {
+  background-color: red;
+  border-color: red;
+}
+
+.btn-primary {
+  background-color: red;
+  border-color: red;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: darkred;
+  border-color: darkred;
 }
 
 /* Confirm Order */
@@ -530,16 +560,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: grey;
+  border-color: grey;
 }
 
 .page-link {
-  color: #fa9c23;
+  color: black;
 }
 
 .page-link:hover {
-  color: #fa9c23;
+  color: red;
 }
 
 /* Admin Sidebar */
@@ -595,8 +625,8 @@ footer {
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
-  color: #fff;
-  background: #236b42;
+  color: grey;
+  background: white;
 }
 a[data-toggle="collapse"] {
   position: relative;
