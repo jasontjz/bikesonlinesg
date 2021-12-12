@@ -27,6 +27,7 @@ app.use("/api/v1", order);
 //connecting to 4000 in production mode to the Atlas MongoDB
 //localhost:4000 is rendering properly
 //***************************************
+
 if (process.env.NODE_ENV === "PRODUCTION") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
 
@@ -34,6 +35,8 @@ if (process.env.NODE_ENV === "PRODUCTION") {
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
   });
 }
+//***************************************
+
 //***************************************
 
 //Middleware to handle errors
