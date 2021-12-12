@@ -1,10 +1,10 @@
 const app = require("./app");
-const express = require("express");
 const connectDatabase = require("./config/database");
+const fileUpload = require("express-fileupload");
 
-// const dotenv = require("dotenv");
-// const cloudinary = require("cloudinary").v2;
-// const { addListener } = require("nodemon");
+const dotenv = require("dotenv");
+const cloudinary = require("cloudinary").v2;
+const { addListener } = require("nodemon");
 
 //Handle uncaught exceptions
 process.on("uncaughtException", (err) => {
@@ -14,20 +14,8 @@ process.on("uncaughtException", (err) => {
 });
 
 // setting up config file
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "backend/config/config.env" });
-}
 
-if (process.env.NODE_ENV === "PRODUCTION") {
-  // Exprees will serve up production assets
-  app.use(express.static("frontend/build"));
-
-  // Express serve up index.html file if it doesn't recognize route
-  // const path = require("path");
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-  });
-}
+dotenv.config({ path: "backend/config/config.env" });
 
 // Connecting to database
 connectDatabase();
