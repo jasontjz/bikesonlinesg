@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header";
@@ -25,6 +26,8 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
+
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
     <Router>
