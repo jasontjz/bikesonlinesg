@@ -68,8 +68,7 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# vuepress build output
-.vuepress/dist
+
 
 # Serverless directories
 .serverless
@@ -104,8 +103,7 @@ data/journal/WiredTigerLog.0000000005
 # testing
 /coverage
 
-# production
-/frontend/build
+
 
 # misc
 /backend/config/config.env
