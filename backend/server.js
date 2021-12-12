@@ -3,8 +3,8 @@ const connectDatabase = require("./config/database");
 const fileUpload = require("express-fileupload");
 
 const dotenv = require("dotenv");
-const cloudinary = require("cloudinary").v2;
-const { addListener } = require("nodemon");
+// const cloudinary = require("cloudinary").v2;
+// const { addListener } = require("nodemon");
 
 //Handle uncaught exceptions
 process.on("uncaughtException", (err) => {
