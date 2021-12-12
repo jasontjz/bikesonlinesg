@@ -1,6 +1,7 @@
 const app = require("./app");
 const connectDatabase = require("./config/database");
 const fileUpload = require("express-fileupload");
+const express = require("express");
 
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary").v2;
@@ -27,11 +28,27 @@ connectDatabase();
 //   api_secret: process.env.CLOUDINARY_API_SECRET,
 // });
 
+//start of stackoverflow suggestion
+//***************************
+if (process.env.NODE_ENV === "PRODUCTION") {
+  // Exprees will serve up production assets
+  app.use(express.static("frontend/build"));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
+
 const server = app.listen(process.env.PORT, () => {
   console.log(
     `server started on port: ${process.env.PORT} in ${process.env.NODE_ENV} mode.`
   );
 });
+
+//***************************
+//end of stack over flow suggestion
 
 //handle unhandleed promise rejections
 
