@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../layout/Loader";
+import { useAlert } from "react-alert";
 
 import MetaData from "../layout/MetaData";
 import { login, clearErrors } from "../../actions/userActions";
 
 const Login = () => {
+  const alert = useAlert();
+
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +26,7 @@ const Login = () => {
     }
 
     if (error) {
-      window.alert("wrong password");
+      alert.error(error);
       dispatch(clearErrors());
     }
   }, [dispatch, isAuthenticated, error]);

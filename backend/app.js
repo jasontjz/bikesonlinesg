@@ -23,6 +23,9 @@ app.use("/api/v1", products);
 app.use("/api/v1", auth);
 app.use("/api/v1", order);
 
+//Middleware to handle errors
+app.use(errorMiddleware);
+
 //Added during section 20.132 (Deployment) - still OK
 //connecting to 4000 in production mode to the Atlas MongoDB
 //localhost:4000 is rendering properly
@@ -38,8 +41,5 @@ if (process.env.NODE_ENV === "PRODUCTION") {
 //***************************************
 
 //***************************************
-
-//Middleware to handle errors
-app.use(errorMiddleware);
 
 module.exports = app;

@@ -38,18 +38,23 @@ exports.registerUser = async (req, res, next) => {
 
 //login user => /api/v1/login
 exports.loginUser = async (req, res, next) => {
+  console.log("logging in");
   try {
     const { email, password } = req.body;
     //checks if email and password is entered by user
     if (!email || !password) {
+      console.log("no email and no password");
       return next(new ErrorHandler("Please enter email and password", 400));
     }
     //Finding user in database
     const user = await User.findOne({ email }).select("+password");
 
     if (!user) {
+      console.log("looking for user");
       return next(new ErrorHandler("Invalid Email or Password", 401));
     }
+
+    console.log("checking for password");
 
     // Checks if password is correct or not
     const isPasswordMatched = await user.comparePassword(password);
@@ -86,7 +91,6 @@ exports.forgotPassword = async (req, res, next) => {
     //create reset password url
 
     const resetUrl = `${req.protocol}://${req.get(
-
       "host"
     )}/password/reset/${resetToken}`;
 
