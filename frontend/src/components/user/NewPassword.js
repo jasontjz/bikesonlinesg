@@ -21,11 +21,11 @@ const NewPassword = ({ match }) => {
   useEffect(() => {
     if (error) {
       alert.error(error);
-      dispatch(clearErrors());
+      // dispatch(clearErrors());
     }
 
     if (success) {
-      alert.success(success);
+      alert.success("Password has been reset");
 
       navigate("/login");
     }

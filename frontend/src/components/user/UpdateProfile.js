@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
-// import { useAlert } from "react-alert";
+import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_PROFILE_RESET } from "../../constants/userConstants";
@@ -15,7 +15,7 @@ const UpdateProfile = () => {
   const [email, setEmail] = useState("");
 
   let navigate = useNavigate();
-  //   const alert = useAlert();
+  const alert = useAlert();
 
   const dispatch = useDispatch();
 
@@ -30,12 +30,12 @@ const UpdateProfile = () => {
     }
 
     if (error) {
-      //   alert.error("doesn't work");
+      alert.error(error);
       dispatch(clearErrors());
     }
 
     if (isUpdated) {
-      //   alert.success("user updated successfully");
+      alert.success("user updated successfully");
       dispatch(loadUser());
       navigate("/me");
       dispatch({
