@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
-// import { useAlert } from "react-alert";
+import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,7 +11,7 @@ const NewPassword = ({ match }) => {
 
   let navigate = useNavigate();
   // useAlert() causes problems
-  //   const alert = useAlert();
+  const alert = useAlert();
   const dispatch = useDispatch();
 
   const { success, error, loading } = useSelector(
@@ -20,13 +20,13 @@ const NewPassword = ({ match }) => {
 
   useEffect(() => {
     if (error) {
-      //   alert.error("doesn't work");
+      alert.error(error);
       dispatch(clearErrors());
     }
 
     if (success) {
-      //   alert.success("password updated successfully");
-      console.log("password updated succesfully");
+      alert.success(success);
+
       navigate("/login");
     }
   }, [dispatch, error, success]);

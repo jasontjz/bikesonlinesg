@@ -142,13 +142,13 @@ export const updatePassword = (passwords) => async (dispatch) => {
     );
 
     dispatch({
-      type: UPDATE_PROFILE_SUCCESS,
+      type: UPDATE_PASSWORD_SUCCESS,
       payload: data.success,
     });
   } catch (error) {
     dispatch({
-      type: UPDATE_PROFILE_FAIL,
-      payload: error.response.data.message,
+      type: UPDATE_PASSWORD_FAIL,
+      payload: error.response.data.error,
     });
   }
 };
@@ -173,7 +173,7 @@ export const forgotPassword = (email) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: FORGOT_PASSWORD_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.error,
     });
   }
 };
@@ -202,7 +202,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: NEW_PASSWORD_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.error,
     });
   }
 };

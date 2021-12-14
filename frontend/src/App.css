@@ -96,6 +96,12 @@ nav {
   color: white;
 }
 
+.dropdown-item:active {
+  background-color: darkred;
+  border-color: darkred;
+  color: white;
+}
+
 /* Home page */
 #products_heading {
   margin-top: 1.8rem;
@@ -118,6 +124,12 @@ nav {
   font-size: 1.1rem;
 }
 
+.card-title a:active {
+  color: darkred;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
 .card-body {
   padding-left: 0;
 }
@@ -127,7 +139,7 @@ nav {
 }
 
 #view_btn {
-  background-color: #fa9c23;
+  background-color: red;
   color: white;
 }
 
@@ -223,6 +235,14 @@ footer {
   font-weight: bolder;
 }
 
+#cart_btn:active {
+  border-radius: 7px;
+  background-color: darkred;
+  border: none;
+  padding: 0.1rem, 1.5rem;
+  font-weight: bolder;
+}
+
 #product_seller {
   color: grey;
   font-size: 0.9rem;
@@ -313,16 +333,23 @@ footer {
   margin-top: 2rem;
   border-radius: 10px;
 }
+
+#checkout_btn:active {
+  background-color: darkred;
+  border-color: darkred;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
 .review-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: red;
+  border-color: red;
   margin-top: 2rem;
   border-radius: 5rem;
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: red;
+  border-color: red;
 }
 
 #order_summary {
@@ -361,9 +388,16 @@ footer {
 
 /* Login & Register */
 
-#btn_login_main {
+#btn_login_main,
+#register_button {
   background-color: red;
   border-color: red;
+}
+
+#btn_login_main:active,
+#register_button:active {
+  background-color: darkred;
+  border-color: darkred;
 }
 
 .wrapper {
@@ -380,8 +414,8 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: red;
+  border-color: red;
   color: white;
   margin-top: 2.5rem;
 }
@@ -395,6 +429,12 @@ footer {
 #new_password_button {
   background-color: red;
   border-color: red;
+}
+
+#forgot_password_button:active,
+#new_password_button:active {
+  background-color: darkred;
+  border-color: darkred;
 }
 
 /* Avatar */
@@ -466,7 +506,7 @@ footer {
 }
 
 .active-step {
-  background: #fa9c23;
+  background: red;
   color: #fff;
 }
 
@@ -474,7 +514,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid red;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -482,9 +522,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
+  border-top: 20px solid red;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-bottom: 20px solid red;
   margin-right: -1px;
 }
 
@@ -524,16 +564,14 @@ footer {
 }
 
 #btn_update_profile,
-#btn_update_password {
-  background-color: red;
-  border-color: red;
-}
-
+#btn_update_password,
 .btn-primary {
   background-color: red;
   border-color: red;
 }
 
+#btn_update_profile:active,
+#btn_update_password:active,
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
@@ -549,8 +587,8 @@ footer {
 }
 
 .update-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: red;
+  border-color: red;
   color: white;
 }
 
@@ -695,7 +733,7 @@ ul.CTAs a {
 }
 
 .orange {
-  color: #fa9c23;
+  color: red;
 }
 
 .yellow {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
-// import { useAlert } from "react-alert";
+import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_PASSWORD_RESET } from "../../constants/userConstants";
@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
   let navigate = useNavigate();
   // useAlert() causes problems
-  //   const alert = useAlert();
+  const alert = useAlert();
   const dispatch = useDispatch();
 
   const { message, error, loading } = useSelector(
@@ -20,13 +20,12 @@ const ForgotPassword = () => {
 
   useEffect(() => {
     if (error) {
-      //   alert.error("doesn't work");
+      alert.error(error);
       dispatch(clearErrors());
     }
 
     if (message) {
-      //   alert.success("password updated successfully");
-      console.log("password updated succesfully");
+      alert.success(message);
     }
   }, [dispatch, error, message]);
 
