@@ -53,10 +53,39 @@ function App() {
             <Route path="/password/reset" element={<NewPassword />} exact />
 
             {/* Routes to Protect */}
-            <Route path="/me" element={<Profile />} exact />
-            <Route path="/me/update" element={<UpdateProfile />} exact />
-            <Route path="/password/update" element={<UpdatePassword />} exact />
-            <Route path="/password/forgot" element={<ForgotPassword />} exact />
+            <Route
+              path="/me"
+              element={
+                <ProtectedRoute>
+                  {" "}
+                  <Profile />{" "}
+                </ProtectedRoute>
+              }
+              exact
+            />
+            <Route
+              path="/me/update"
+              element={
+                <ProtectedRoute>
+                  {" "}
+                  <UpdateProfile />{" "}
+                </ProtectedRoute>
+              }
+              exact
+            />
+            <Route
+              path="/password/update"
+              element={
+                <ProtectedRoute>
+                  {" "}
+                  <UpdatePassword />{" "}
+                </ProtectedRoute>
+              }
+              exact
+            />
+            {/* <Route path="/me" element={<Profile />} exact /> */}
+            {/* <Route path="/me/update" element={<UpdateProfile />} exact />
+            <Route path="/password/update" element={<UpdatePassword />} exact /> */}
           </Routes>
         </div>
 
