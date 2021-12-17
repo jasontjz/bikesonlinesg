@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
   const { user, loading } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
 
   return (
     <div className="row justify-content-around mt-5 user-info">
@@ -24,14 +26,14 @@ const Profile = () => {
         <p>{String(user && user.createdAt).substring(0, 10)}</p>
 
         {user && user.role !== "admin" && (
-          <Link to="/orders/me" className="btn btn-danger btn-block mt-5">
+          <Link to="" className="btn btn-danger btn-block mt-5">
             My Orders
           </Link>
         )}
         <Link
           to="/me/update"
           id="btn_edit_profile"
-          className="btn btn-primary btn-block my-5"
+          className="btn btn-primary btn-block mt-3"
         >
           Edit Profile
         </Link>
@@ -42,6 +44,10 @@ const Profile = () => {
           className="btn btn-primary btn-block mt-3"
         >
           Change Password
+        </Link>
+
+        <Link to="/" className="btn btn-primary btn-block mt-3">
+          Back
         </Link>
       </div>
     </div>

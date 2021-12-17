@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { useAlert } from "react-alert";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_PROFILE_RESET } from "../../constants/userConstants";
 
@@ -134,6 +134,10 @@ const UpdateProfile = () => {
           >
             Update
           </button>
+
+          <Link to="/me" className="btn btn-secondary btn-block mt-3">
+            Back
+          </Link>
         </form>
       </div>
     </div>

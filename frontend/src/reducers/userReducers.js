@@ -155,6 +155,7 @@ export const forgotPasswordReducer = (state = {}, action) => {
 
     case FORGOT_PASSWORD_FAIL:
     case NEW_PASSWORD_FAIL:
+      // console.log(action.payload);
       return {
         ...state,
         loading: false,

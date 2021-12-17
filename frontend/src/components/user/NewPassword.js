@@ -20,8 +20,9 @@ const NewPassword = ({ match }) => {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
-      // dispatch(clearErrors());
+      // console.log(error);
+      alert.show(error);
+      dispatch(clearErrors());
     }
 
     if (success) {

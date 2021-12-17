@@ -200,6 +200,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
       payload: data.success,
     });
   } catch (error) {
+    // console.log(error.response.data.error);
     dispatch({
       type: NEW_PASSWORD_FAIL,
       payload: error.response.data.error,
