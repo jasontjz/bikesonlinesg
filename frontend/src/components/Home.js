@@ -22,13 +22,13 @@ const Home = () => {
   const [category, setCategory] = useState("");
   const categories = [
     "Bikes",
-    "Bike Accessories",
+    // "Bike Accessories",
     "Cycling Apparel",
     "Cycling Footwear",
-    "Bike Spare Parts",
+    // "Bike Spare Parts",
     "Bike Helmets",
     "Cycling Protection",
-    "Nutrition",
+    // "Nutrition",
   ];
 
   const dispatch = useDispatch();
@@ -114,7 +114,7 @@ const Home = () => {
                         </ul>
                       </div>
                       {/* RATING FILTER */}
-                      <hr className="my-3" />
+                      {/* <hr className="my-3" />
                       <div className="mt-5">
                         <h4 className="mb-3">Ratings</h4>
                         <ul className="pl-0">
@@ -138,7 +138,7 @@ const Home = () => {
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
